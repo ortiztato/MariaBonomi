@@ -84,12 +84,13 @@
 				class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex justify-between items-center"
 			>
 				<a href="#" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+					<img
+						src="assets/logo.png"
+						alt="Maria Bonomi"
+						class="h-[30px] w-auto dark:invert"
+					/>
 					<span
-						class="material-icons-outlined text-primary dark:text-primary-light text-2xl lg:text-3xl"
-						>shield</span
-					>
-					<span
-						class="text-lg lg:text-xl font-bold tracking-[0.2em] text-primary dark:text-white uppercase"
+						class="text-lg lg:text-xl font-bold tracking-[0.1em] text-primary dark:text-white uppercase"
 						>Maria Bonomi</span
 					>
 				</a>
@@ -116,12 +117,44 @@
 					>
 				</div>
 				<button
+					id="menu-toggle"
 					class="md:hidden text-primary dark:text-white hover:text-accent-gold transition-colors"
 				>
 					<span class="material-icons-outlined text-3xl">menu</span>
 				</button>
 			</div>
 		</nav>
+
+		<!-- Mobile Menu Overlay -->
+		<div
+			id="mobile-menu"
+			class="fixed inset-0 z-[60] bg-background-light dark:bg-background-dark translate-x-full transition-transform duration-500 ease-in-out md:hidden"
+		>
+			<div class="flex flex-col h-full">
+				<div class="h-20 flex items-center justify-between px-6 border-b border-stone-200 dark:border-stone-800">
+					<button id="menu-close" class="text-primary dark:text-white">
+						<span class="material-icons-outlined text-3xl">close</span>
+					</button>
+				</div>
+				<div class="flex-1 flex flex-col items-center justify-center gap-10">
+					<div >
+						<img src="assets/logo.png" alt="Maria Bonomi Logo" class="h-[135px] w-auto dark:invert" />
+					</div>
+					<a class="mobile-link text-lg font-semibold tracking-[0.3em] uppercase hover:text-accent-gold transition-colors" href="#sobre-nosotros">Sobre Nosotros</a>
+					<a class="mobile-link text-lg font-semibold tracking-[0.3em] uppercase hover:text-accent-gold transition-colors" href="#servicios">Servicios</a>
+					<a class="mobile-link text-lg font-semibold tracking-[0.3em] uppercase hover:text-accent-gold transition-colors" href="#proceso">Nuestro Proceso</a>
+					<a class="mobile-link bg-primary text-white px-10 py-4 text-xs font-bold tracking-[0.3em] uppercase hover:bg-primary-light transition-all rounded" href="#contacto">Contactanos</a>
+				</div>
+				<div class="p-12 text-center border-t border-stone-100 dark:border-stone-800">
+					<p class="text-[10px] text-muted-gray uppercase tracking-widest mb-4">Elegancia & Excelencia desde 1984</p>
+					<div class="flex justify-center gap-6">
+						<span class="material-icons-outlined text-primary/30 text-xl">verified_user</span>
+						<span class="material-icons-outlined text-primary/30 text-xl">lock</span>
+						<span class="material-icons-outlined text-primary/30 text-xl">handshake</span>
+					</div>
+				</div>
+			</div>
+		</div>
 		<main class="relative bg-background-light dark:bg-background-dark ">
 			<section class="relative w-full h-screen min-h-[700px] overflow-hidden">
 				<div class="absolute inset-0">
@@ -141,16 +174,18 @@
 							class="inline-block text-accent-gold text-xs lg:text-sm font-bold tracking-[0.4em] uppercase mb-8 border-b border-accent-gold/40 pb-2"
 							>Est. 1984</span
 						>
+						<div class="mb-10 flex justify-center">
+							<img
+								src="assets/logo.png"
+								alt="Maria Bonomi Staffing"
+								class="h-32 md:h-48 lg:h-56 w-auto brightness-0 invert drop-shadow-2xl"
+							/>
+						</div>
 						<h1
-							class="text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight drop-shadow-lg uppercase"
-						>
-							Maria Bonomi Staffing
-						</h1>
-						<p
 							class="font-body text-gray-100 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto opacity-90"
 						>
 							Personal Doméstico de Confianza, Seleccionado con Cuidado
-						</p>
+						</h1>
 						<div
 							class="flex flex-col sm:flex-row gap-4 justify-center items-center"
 						>
@@ -519,9 +554,11 @@
 					<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 items-start">
 						<div class="col-span-1 md:col-span-1">
 							<div class="flex items-center gap-2 mb-6">
-								<span class="material-icons-outlined text-accent-gold text-2xl"
-									>shield</span
-								>
+								<img
+									src="assets/logo.png"
+									alt="Maria Bonomi"
+									class="h-[26px] w-auto brightness-0 invert"
+								/>
 								<span
 									class="text-lg font-bold tracking-wide text-white uppercase"
 									>Maria Bonomi</span
@@ -658,5 +695,30 @@
 				</div>
 			</footer>
 		</main>
+		<script>
+			const menuToggle = document.getElementById('menu-toggle');
+			const menuClose = document.getElementById('menu-close');
+			const mobileMenu = document.getElementById('mobile-menu');
+			const mobileLinks = document.querySelectorAll('.mobile-link');
+
+			function toggleMenu() {
+				mobileMenu.classList.toggle('translate-x-full');
+				if (!mobileMenu.classList.contains('translate-x-full')) {
+					document.body.style.overflow = 'hidden';
+				} else {
+					document.body.style.overflow = '';
+				}
+			}
+
+			menuToggle.addEventListener('click', toggleMenu);
+			menuClose.addEventListener('click', toggleMenu);
+
+			mobileLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					mobileMenu.classList.add('translate-x-full');
+					document.body.style.overflow = '';
+				});
+			});
+		</script>
 	</body>
 </html>
