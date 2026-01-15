@@ -1,318 +1,662 @@
 <!DOCTYPE html>
-<html class="light" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Agencia de Personal Doméstico | Kensington</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#294736",
-              "primary-light": "#3e634d",
-              "background-light": "#FAF7F2", 
-              "background-beige": "#F6F2EB",
-              "background-dark": "#1f1f1f",
-              "accent-gold": "#C9A961",
-              "charcoal": "#2B2D2F",
-              "muted-gray": "#6E727A"
-            },
-            fontFamily: {
-              "display": ["Noto Serif", "serif"],
-              "body": ["Manrope", "sans-serif"]
-            },
-            borderRadius: {
-              "DEFAULT": "4px", 
-              "lg": "6px", 
-              "xl": "8px", 
-              "full": "9999px",
-              "sm": "2px"
-            }
-          },
-        },
-      }
-    </script>
-<style type="text/tailwindcss">
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #FAF7F2; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #C9A961; 
-            border-radius: 2px;
-        }
-        .text-justify-inter-word {
-            text-align: justify;
-            text-justify: inter-word;
-        }
-        body {
-            min-height: 100vh;
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-100 font-display antialiased overflow-x-hidden">
-<nav class="fixed w-full z-50 transition-all duration-300 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800">
-<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex justify-between items-center">
-<div class="flex items-center gap-2">
-<span class="material-icons-outlined text-primary dark:text-primary-light text-2xl lg:text-3xl">shield</span>
-<span class="text-lg lg:text-xl font-bold tracking-[0.2em] text-primary dark:text-white uppercase">KENSINGTON</span>
-</div>
-<div class="hidden md:flex items-center gap-10">
-<a class="text-xs font-semibold tracking-widest uppercase hover:text-accent-gold transition-colors" href="#">Buscar Personal</a>
-<a class="text-xs font-semibold tracking-widest uppercase hover:text-accent-gold transition-colors" href="#">Nuestro Proceso</a>
-<a class="text-xs font-semibold tracking-widest uppercase hover:text-accent-gold transition-colors" href="#">Empleos</a>
-<a class="bg-primary text-white px-6 py-3 text-xs font-bold tracking-widest uppercase hover:bg-primary-light transition-all" href="#">Contáctanos</a>
-</div>
-<button class="md:hidden text-primary dark:text-white hover:text-accent-gold transition-colors">
-<span class="material-icons-outlined text-3xl">menu</span>
-</button>
-</div>
-</nav>
-<main class="relative bg-background-light dark:bg-background-dark pb-24">
-<section class="relative w-full h-screen min-h-[700px] overflow-hidden">
-<div class="absolute inset-0">
-<img alt="Interior clásico elegante con iluminación cálida" class="w-full h-full object-cover object-center brightness-75 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACYGl4kW4tF6AQP2tKYBkxYBhQWSyr-TnyH7aQRhkW3wqrCF3lC1a2xaI3zLCITu5AT9-A9Ix8_llanW9Sng-vEmrz5jR8MWhGqB27d9KH84DEzKDRsRr-BDGLqlu3z7UnqBajO-wMvQboK1hyXuTFIIqSWqcU_VZ9eK9Ekht9Tck1C91imOFg6fTsr1JaEFeN6Ier5OCp8CsE6hgS7d-RVaEthm7P0-z9uuNolblw6RJUCnuVnedN3Q8EoKgxRe55ThW2qbMx3TQf"/>
-<div class="absolute inset-0 bg-black/30"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
-</div>
-<div class="relative h-full flex items-center justify-center px-6">
-<div class="max-w-3xl text-center text-white">
-<span class="inline-block text-accent-gold text-xs lg:text-sm font-bold tracking-[0.4em] uppercase mb-8 border-b border-accent-gold/40 pb-2">Est. 1984</span>
-<h1 class="text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight drop-shadow-lg">
-                        Personal Doméstico de Confianza, Seleccionado con Cuidado
-                    </h1>
-<p class="font-body text-gray-100 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto opacity-90">
-                        Brindando a familias exigentes el más alto nivel de servicio, integridad y discreción total desde 1984.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<button class="bg-primary hover:bg-primary-light text-white font-body font-semibold tracking-widest text-sm uppercase py-5 px-10 rounded shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                            Solicitar una Consulta
-                        </button>
-<p class="mt-4 sm:mt-0 sm:ml-6 font-body text-xs text-white/70 uppercase tracking-widest">
-                            Gratuita y Confidencial
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="flex justify-center py-20">
-<div class="w-24 h-[1px] bg-accent-gold"></div>
-</div>
-<section class="py-12">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl text-primary dark:text-white mb-4">Nuestros Servicios</h2>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400 uppercase tracking-[0.3em]">Soluciones de Personal a Medida</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="group bg-background-beige dark:bg-stone-800 p-8 rounded border border-stone-200 dark:border-stone-700 hover:border-accent-gold transition-all duration-300 hover:shadow-xl">
-<div class="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-white dark:bg-stone-700 shadow-sm group-hover:bg-primary transition-colors">
-<span class="material-icons-outlined text-accent-gold group-hover:text-white text-2xl">cleaning_services</span>
-</div>
-<h3 class="text-xl font-medium text-charcoal dark:text-gray-100 mb-3">Limpieza</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed">Estándares impecables para hogares finos y gestión de fincas.</p>
-</div>
-<div class="group bg-background-beige dark:bg-stone-800 p-8 rounded border border-stone-200 dark:border-stone-700 hover:border-accent-gold transition-all duration-300 hover:shadow-xl">
-<div class="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-white dark:bg-stone-700 shadow-sm group-hover:bg-primary transition-colors">
-<span class="material-icons-outlined text-accent-gold group-hover:text-white text-2xl">child_care</span>
-</div>
-<h3 class="text-xl font-medium text-charcoal dark:text-gray-100 mb-3">Nannies</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed">Profesionales de cuidado infantil altamente calificados para padres exigentes.</p>
-</div>
-<div class="group bg-background-beige dark:bg-stone-800 p-8 rounded border border-stone-200 dark:border-stone-700 hover:border-accent-gold transition-all duration-300 hover:shadow-xl">
-<div class="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-white dark:bg-stone-700 shadow-sm group-hover:bg-primary transition-colors">
-<span class="material-icons-outlined text-accent-gold group-hover:text-white text-2xl">directions_car</span>
-</div>
-<h3 class="text-xl font-medium text-charcoal dark:text-gray-100 mb-3">Choferes</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed">Servicios de transporte confiables y discretos para sus viajes diarios.</p>
-</div>
-<div class="group bg-background-beige dark:bg-stone-800 p-8 rounded border border-stone-200 dark:border-stone-700 hover:border-accent-gold transition-all duration-300 hover:shadow-xl">
-<div class="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-white dark:bg-stone-700 shadow-sm group-hover:bg-primary transition-colors">
-<span class="material-icons-outlined text-accent-gold group-hover:text-white text-2xl">deck</span>
-</div>
-<h3 class="text-xl font-medium text-charcoal dark:text-gray-100 mb-3">Gestores de Fincas</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed">Supervisión completa de la propiedad y coordinación del hogar.</p>
-</div>
-</div>
-<div class="mt-12 text-center">
-<a class="inline-flex items-center text-primary dark:text-primary-light font-body text-sm font-semibold tracking-widest hover:text-accent-gold transition-colors underline decoration-accent-gold/30 underline-offset-8" href="#">
-                        VER TODAS LAS POSICIONES
-                        <span class="material-icons-outlined text-base ml-2">arrow_forward</span>
-</a>
-</div>
-</section>
-<section class="bg-background-beige dark:bg-stone-900 py-20 px-10 my-20 relative overflow-hidden rounded-lg">
-<div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 border border-accent-gold/10 rounded-full"></div>
-<div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 border border-accent-gold/10 rounded-full"></div>
-<h2 class="text-3xl md:text-4xl text-center text-primary dark:text-white mb-16 relative z-10">Por Qué Elegir Kensington</h2>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10">
-<div class="flex flex-col items-center text-center">
-<div class="mb-6">
-<span class="material-icons-outlined text-accent-gold text-5xl">verified_user</span>
-</div>
-<h3 class="text-xl font-medium text-charcoal dark:text-gray-100 mb-4">Selección Rigurosa</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed max-w-sm">
-                            Aceptamos a menos del 2% de los solicitantes. Nuestro proceso de evaluación de varias etapas incluye verificaciones de antecedentes extensas, evaluaciones psicológicas y referencias verificadas.
-                        </p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="mb-6">
-<span class="material-icons-outlined text-accent-gold text-5xl">lock</span>
-</div>
-<h3 class="text-xl font-medium text-charcoal dark:text-gray-100 mb-4">Discreción Total</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed max-w-sm">
-                            La privacidad es primordial. Operamos con estrictos acuerdos de confidencialidad y comprendemos las sensibilidades de los hogares de alto perfil.
-                        </p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="mb-6">
-<span class="material-icons-outlined text-accent-gold text-5xl">handshake</span>
-</div>
-<h3 class="text-xl font-medium text-charcoal dark:text-gray-100 mb-4">Emparejamiento Personalizado</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed max-w-sm">
-                            No solo cubrimos vacantes; encontramos el ajuste de personalidad perfecto para la dinámica de su familia, asegurando la armonía a largo plazo.
-                        </p>
-</div>
-</div>
-</section>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 py-20 items-start">
-<section>
-<div class="mb-12">
-<h2 class="text-3xl text-primary dark:text-white">Nuestro Proceso</h2>
-</div>
-<div class="relative">
-<div class="absolute left-6 top-4 bottom-4 w-px bg-accent-gold/40"></div>
-<div class="space-y-12">
-<div class="relative flex items-start group">
-<div class="absolute left-6 -translate-x-1/2 w-3 h-3 bg-background-light dark:bg-background-dark border-2 border-accent-gold rounded-full mt-1.5 z-10"></div>
-<div class="pl-16">
-<span class="text-accent-gold font-display text-xs tracking-[0.3em] uppercase mb-1 block">Paso 01</span>
-<h3 class="text-xl text-charcoal dark:text-gray-100 mb-2">Consulta</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400">Comenzamos con una inmersión profunda en sus necesidades y preferencias de estilo de vida.</p>
-</div>
-</div>
-<div class="relative flex items-start group">
-<div class="absolute left-6 -translate-x-1/2 w-3 h-3 bg-background-light dark:bg-background-dark border-2 border-accent-gold rounded-full mt-1.5 z-10"></div>
-<div class="pl-16">
-<span class="text-accent-gold font-display text-xs tracking-[0.3em] uppercase mb-1 block">Paso 02</span>
-<h3 class="text-xl text-charcoal dark:text-gray-100 mb-2">Selección</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400">Curamos una lista corta de candidatos de primer nivel de nuestra red exclusiva.</p>
-</div>
-</div>
-<div class="relative flex items-start group">
-<div class="absolute left-6 -translate-x-1/2 w-3 h-3 bg-background-light dark:bg-background-dark border-2 border-accent-gold rounded-full mt-1.5 z-10"></div>
-<div class="pl-16">
-<span class="text-accent-gold font-display text-xs tracking-[0.3em] uppercase mb-1 block">Paso 03</span>
-<h3 class="text-xl text-charcoal dark:text-gray-100 mb-2">Entrevista</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400">Conozca a su personal potencial en el entorno de su elección.</p>
-</div>
-</div>
-<div class="relative flex items-start group">
-<div class="absolute left-6 -translate-x-1/2 w-3 h-3 bg-primary border-2 border-primary rounded-full mt-1.5 z-10 shadow-lg shadow-primary/30"></div>
-<div class="pl-16">
-<span class="text-primary dark:text-primary-light font-display text-xs tracking-[0.3em] uppercase mb-1 block font-bold">Paso 04</span>
-<h3 class="text-xl text-charcoal dark:text-gray-100 mb-2">Colocación</h3>
-<p class="font-body text-sm text-muted-gray dark:text-gray-400">Integración perfecta en su hogar con apoyo continuo.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="lg:sticky lg:top-32">
-<div class="border border-stone-200 dark:border-stone-700 p-12 rounded bg-white dark:bg-stone-800 shadow-xl relative text-center">
-<span class="material-icons-outlined text-accent-gold/20 text-8xl absolute top-8 left-8 -z-0 rotate-180">format_quote</span>
-<div class="relative z-10 pt-10">
-<p class="font-display italic text-2xl text-charcoal dark:text-gray-200 mb-10 leading-relaxed">
-                                "El personal proporcionado fue absolutamente impecable. Su presencia ha transformado silenciosamente nuestra vida hogareña en algo manejable y elegante."
-                            </p>
-<div class="w-12 h-px bg-accent-gold mx-auto mb-6"></div>
-<cite class="not-italic font-body text-sm text-muted-gray dark:text-gray-400 uppercase tracking-[0.4em] block">
-                                — La Familia Kensington, Londres
-                            </cite>
-</div>
-</div>
-<div class="mt-16 text-center">
-<h2 class="text-2xl text-primary dark:text-white mb-8">Experimente la Diferencia</h2>
-<button class="w-full bg-primary hover:bg-primary-light text-white font-body font-semibold tracking-widest text-sm uppercase py-5 px-8 rounded shadow-lg shadow-primary/20 transition-all duration-300 transform hover:scale-[1.02]">
-                            Solicitar una Consulta Privada
-                        </button>
-</div>
-</section>
-</div>
-</div>
-<footer class="bg-primary dark:bg-black text-background-light py-20 mt-20">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 items-start">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-2 mb-6">
-<span class="material-icons-outlined text-accent-gold text-2xl">shield</span>
-<span class="text-lg font-bold tracking-wide text-white uppercase">KENSINGTON</span>
-</div>
-<p class="text-white/60 text-sm leading-relaxed max-w-xs">
-                            La principal agencia de personal doméstico que sirve a los hogares más distinguidos del mundo desde 1984.
-                        </p>
-</div>
-<div>
-<h4 class="text-white text-xs font-bold tracking-widest uppercase mb-6">Servicios</h4>
-<ul class="space-y-3 text-white/70 text-sm font-body">
-<li><a class="hover:text-accent-gold transition-colors" href="#">Limpieza</a></li>
-<li><a class="hover:text-accent-gold transition-colors" href="#">Nannies y Cuidado Infantil</a></li>
-<li><a class="hover:text-accent-gold transition-colors" href="#">Choferes</a></li>
-<li><a class="hover:text-accent-gold transition-colors" href="#">Gestión de Fincas</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white text-xs font-bold tracking-widest uppercase mb-6">Empresa</h4>
-<ul class="space-y-3 text-white/70 text-sm font-body">
-<li><a class="hover:text-accent-gold transition-colors" href="#">Sobre Nosotros</a></li>
-<li><a class="hover:text-accent-gold transition-colors" href="#">Nuestro Proceso</a></li>
-<li><a class="hover:text-accent-gold transition-colors" href="#">Casos de Éxito</a></li>
-<li><a class="hover:text-accent-gold transition-colors" href="#">Política de Privacidad</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white text-xs font-bold tracking-widest uppercase mb-6">Conectar</h4>
-<div class="flex gap-4 mb-6">
-<a class="text-white/70 hover:text-white transition-colors" href="#">
-<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-</a>
-<a class="text-white/70 hover:text-white transition-colors" href="#">
-<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-</a>
-</div>
-<div class="space-y-1">
-<p class="font-display text-sm text-white/80">+44 (0) 20 7946 0123</p>
-<p class="font-display text-sm text-white/80">concierge@kensingtonstaff.com</p>
-</div>
-</div>
-</div>
-<div class="w-full h-px bg-white/10 my-8"></div>
-<div class="flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-body text-[10px] text-white/40 uppercase tracking-[0.2em]">
-                        © 2023 Kensington Staffing. Todos los derechos reservados.
-                    </p>
-<div class="flex gap-8">
-<a class="text-[10px] text-white/40 uppercase tracking-widest hover:text-white transition-colors" href="#">Privacidad</a>
-<a class="text-[10px] text-white/40 uppercase tracking-widest hover:text-white transition-colors" href="#">Términos</a>
-<a class="text-[10px] text-white/40 uppercase tracking-widest hover:text-white transition-colors" href="#">Política de Cookies</a>
-</div>
-</div>
-</div>
-</footer>
-</main>
+<html class="light" lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<title>Agencia de Personal Doméstico | Maria Bonomi</title>
+		<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+		<link href="https://fonts.googleapis.com" rel="preconnect" />
+		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<script id="tailwind-config">
+			tailwind.config = {
+				darkMode: "class",
+				theme: {
+					extend: {
+						colors: {
+							primary: "#294736",
+							"primary-light": "#3e634d",
+							"background-light": "#FAF7F2",
+							"background-beige": "#F6F2EB",
+							"background-dark": "#1f1f1f",
+							"accent-gold": "#C9A961",
+							charcoal: "#2B2D2F",
+							"muted-gray": "#6E727A",
+						},
+						fontFamily: {
+							display: ["Noto Serif", "serif"],
+							body: ["Manrope", "sans-serif"],
+						},
+						borderRadius: {
+							DEFAULT: "4px",
+							lg: "6px",
+							xl: "8px",
+							full: "9999px",
+							sm: "2px",
+						},
+					},
+				},
+			};
+		</script>
+		<style type="text/tailwindcss">
+			::-webkit-scrollbar {
+				width: 4px;
+			}
+			::-webkit-scrollbar-track {
+				background: #faf7f2;
+			}
+			::-webkit-scrollbar-thumb {
+				background: #c9a961;
+				border-radius: 2px;
+			}
+			.text-justify-inter-word {
+				text-align: justify;
+				text-justify: inter-word;
+			}
+			body {
+				min-height: 100vh;
+			}
+		</style>
+		<style>
+			body {
+				min-height: max(884px, 100dvh);
+			}
+		</style>
+	</head>
+	<body
+		class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-100 font-display antialiased overflow-x-hidden"
+	>
+		<nav
+			class="fixed w-full z-50 transition-all duration-300 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800"
+		>
+			<div
+				class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex justify-between items-center"
+			>
+				<a href="#" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+					<span
+						class="material-icons-outlined text-primary dark:text-primary-light text-2xl lg:text-3xl"
+						>shield</span
+					>
+					<span
+						class="text-lg lg:text-xl font-bold tracking-[0.2em] text-primary dark:text-white uppercase"
+						>Maria Bonomi</span
+					>
+				</a>
+				<div class="hidden md:flex items-center gap-10">
+					<a
+						class="text-xs font-semibold tracking-widest uppercase hover:text-accent-gold transition-colors"
+						href="#sobre-nosotros"
+						>Sobre Nosotros</a
+					>
+          <a
+						class="text-xs font-semibold tracking-widest uppercase hover:text-accent-gold transition-colors"
+						href="#servicios"
+						>Servicios</a
+					>
+					<a
+						class="text-xs font-semibold tracking-widest uppercase hover:text-accent-gold transition-colors"
+						href="#proceso"
+						>Nuestro Proceso</a
+					>
+					<a
+						class="bg-primary text-white px-6 py-3 text-xs font-bold tracking-widest uppercase hover:bg-primary-light transition-all"
+						href="#contacto"
+						>Contactanos</a
+					>
+				</div>
+				<button
+					class="md:hidden text-primary dark:text-white hover:text-accent-gold transition-colors"
+				>
+					<span class="material-icons-outlined text-3xl">menu</span>
+				</button>
+			</div>
+		</nav>
+		<main class="relative bg-background-light dark:bg-background-dark ">
+			<section class="relative w-full h-screen min-h-[700px] overflow-hidden">
+				<div class="absolute inset-0">
+					<img
+						alt="Interior clásico elegante con iluminación cálida"
+						class="w-full h-full object-cover object-center brightness-75 sepia-[0.1]"
+						src="https://lh3.googleusercontent.com/aida-public/AB6AXuACYGl4kW4tF6AQP2tKYBkxYBhQWSyr-TnyH7aQRhkW3wqrCF3lC1a2xaI3zLCITu5AT9-A9Ix8_llanW9Sng-vEmrz5jR8MWhGqB27d9KH84DEzKDRsRr-BDGLqlu3z7UnqBajO-wMvQboK1hyXuTFIIqSWqcU_VZ9eK9Ekht9Tck1C91imOFg6fTsr1JaEFeN6Ier5OCp8CsE6hgS7d-RVaEthm7P0-z9uuNolblw6RJUCnuVnedN3Q8EoKgxRe55ThW2qbMx3TQf"
+					/>
+					<div class="absolute inset-0 bg-black/30"></div>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"
+					></div>
+				</div>
+				<div class="relative h-full flex items-center justify-center px-6">
+					<div class="max-w-3xl text-center text-white">
+						<span
+							class="inline-block text-accent-gold text-xs lg:text-sm font-bold tracking-[0.4em] uppercase mb-8 border-b border-accent-gold/40 pb-2"
+							>Est. 1984</span
+						>
+						<h1
+							class="text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight drop-shadow-lg uppercase"
+						>
+							Maria Bonomi Staffing
+						</h1>
+						<p
+							class="font-body text-gray-100 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto opacity-90"
+						>
+							Personal Doméstico de Confianza, Seleccionado con Cuidado
+						</p>
+						<div
+							class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+						>
+							<a
+								href="#contacto"
+								class="bg-primary hover:bg-primary-light text-white font-body font-semibold tracking-widest text-sm uppercase py-5 px-10 rounded shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+							>
+								Solicitar una Consulta
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
 
-</body></html>
+			<!-- Sobre Nosotros Section -->
+			<section id="sobre-nosotros" class="py-24 px-6 bg-background-light dark:bg-stone-900">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl text-primary dark:text-white mb-8">
+						Sobre Nosotros
+					</h2>
+					<p class="font-body text-lg text-charcoal dark:text-gray-300 leading-relaxed text-balance">
+						Desde 1984, en Maria Bonomi nos dedicamos a conectar a las familias más distinguidas de Argentina y Uruguay con personal doméstico de excelencia. Entendemos que su hogar es su refugio más preciado, por lo que basamos nuestra labor en una selección rigurosa, una discreción inquebrantable y el compromiso de encontrar el apoyo ideal para la armonía de su familia. Con décadas de trayectoria, somos referentes en identificar el talento que combina capacidad técnica con los valores humanos necesarios para brindar un servicio de primer nivel.
+					</p>
+				</div>
+			</section>
+
+			<div id="servicios" class="max-w-7xl mx-auto px-6 lg:px-12">
+				<div class="flex justify-center py-20">
+					<div class="w-24 h-[1px] bg-accent-gold"></div>
+				</div>
+				<section class="py-12">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl md:text-4xl text-primary dark:text-white mb-4">
+							Nuestros Servicios
+						</h2>
+						<p
+							class="font-body text-sm text-muted-gray dark:text-gray-400 uppercase tracking-[0.3em]"
+						>
+							Soluciones de Personal a Medida
+						</p>
+					</div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+						<div
+							class="group bg-background-beige dark:bg-stone-800 p-8 rounded border border-stone-200 dark:border-stone-700 hover:border-accent-gold transition-all duration-300 hover:shadow-xl"
+						>
+							<div
+								class="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-white dark:bg-stone-700 shadow-sm group-hover:bg-primary transition-colors"
+							>
+								<span
+									class="material-icons-outlined text-accent-gold group-hover:text-white text-2xl"
+									>cleaning_services</span
+								>
+							</div>
+							<h3
+								class="text-xl font-medium text-charcoal dark:text-gray-100 mb-3"
+							>
+								Limpieza
+							</h3>
+							<p
+								class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed"
+							>
+								Estándares impecables para hogares finos y gestión de fincas.
+							</p>
+						</div>
+						<div
+							class="group bg-background-beige dark:bg-stone-800 p-8 rounded border border-stone-200 dark:border-stone-700 hover:border-accent-gold transition-all duration-300 hover:shadow-xl"
+						>
+							<div
+								class="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-white dark:bg-stone-700 shadow-sm group-hover:bg-primary transition-colors"
+							>
+								<span
+									class="material-icons-outlined text-accent-gold group-hover:text-white text-2xl"
+									>child_care</span
+								>
+							</div>
+							<h3
+								class="text-xl font-medium text-charcoal dark:text-gray-100 mb-3"
+							>
+								Nannies
+							</h3>
+							<p
+								class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed"
+							>
+								Profesionales de cuidado infantil altamente calificados para
+								padres exigentes.
+							</p>
+						</div>
+						<div
+							class="group bg-background-beige dark:bg-stone-800 p-8 rounded border border-stone-200 dark:border-stone-700 hover:border-accent-gold transition-all duration-300 hover:shadow-xl"
+						>
+							<div
+								class="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-white dark:bg-stone-700 shadow-sm group-hover:bg-primary transition-colors"
+							>
+								<span
+									class="material-icons-outlined text-accent-gold group-hover:text-white text-2xl"
+									>directions_car</span
+								>
+							</div>
+							<h3
+								class="text-xl font-medium text-charcoal dark:text-gray-100 mb-3"
+							>
+								Choferes
+							</h3>
+							<p
+								class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed"
+							>
+								Servicios de transporte confiables y discretos para sus viajes
+								diarios.
+							</p>
+						</div>
+						<div
+							class="group bg-background-beige dark:bg-stone-800 p-8 rounded border border-stone-200 dark:border-stone-700 hover:border-accent-gold transition-all duration-300 hover:shadow-xl"
+						>
+							<div
+								class="w-12 h-12 mb-6 flex items-center justify-center rounded-full bg-white dark:bg-stone-700 shadow-sm group-hover:bg-primary transition-colors"
+							>
+								<span
+									class="material-icons-outlined text-accent-gold group-hover:text-white text-2xl"
+									>deck</span
+								>
+							</div>
+							<h3
+								class="text-xl font-medium text-charcoal dark:text-gray-100 mb-3"
+							>
+								Gestores de Fincas
+							</h3>
+							<p
+								class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed"
+							>
+								Supervisión completa de la propiedad y coordinación del hogar.
+							</p>
+						</div>
+					</div>
+					<!-- <div class="mt-12 text-center">
+						<a
+							class="inline-flex items-center text-primary dark:text-primary-light font-body text-sm font-semibold tracking-widest hover:text-accent-gold transition-colors underline decoration-accent-gold/30 underline-offset-8"
+							href="#"
+						>
+							VER TODAS LAS POSICIONES
+							<span class="material-icons-outlined text-base ml-2"
+								>arrow_forward</span
+							>
+						</a>
+					</div> -->
+				</section>
+				<section
+					id="ventajas"
+					class="bg-background-beige dark:bg-stone-900 py-20 px-10 my-20 relative overflow-hidden rounded-lg"
+				>
+					<div
+						class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 border border-accent-gold/10 rounded-full"
+					></div>
+					<div
+						class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 border border-accent-gold/10 rounded-full"
+					></div>
+					<h2
+						class="text-3xl md:text-4xl text-center text-primary dark:text-white mb-16 relative z-10"
+					>
+						Por Qué Elegirnos
+					</h2>
+					<div class="grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10">
+						<div class="flex flex-col items-center text-center">
+							<div class="mb-6">
+								<span class="material-icons-outlined text-accent-gold text-5xl"
+									>verified_user</span
+								>
+							</div>
+							<h3
+								class="text-xl font-medium text-charcoal dark:text-gray-100 mb-4"
+							>
+								Selección Rigurosa
+							</h3>
+							<p
+								class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed max-w-sm"
+							>
+								Aceptamos a menos del 2% de los solicitantes. Nuestro proceso de
+								evaluación de varias etapas incluye verificaciones de
+								antecedentes extensas, evaluaciones psicológicas y referencias
+								verificadas.
+							</p>
+						</div>
+						<div class="flex flex-col items-center text-center">
+							<div class="mb-6">
+								<span class="material-icons-outlined text-accent-gold text-5xl"
+									>lock</span
+								>
+							</div>
+							<h3
+								class="text-xl font-medium text-charcoal dark:text-gray-100 mb-4"
+							>
+								Discreción Total
+							</h3>
+							<p
+								class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed max-w-sm"
+							>
+								La privacidad es primordial. Operamos con estrictos acuerdos de
+								confidencialidad y comprendemos las sensibilidades de los
+								hogares de alto perfil.
+							</p>
+						</div>
+						<div class="flex flex-col items-center text-center">
+							<div class="mb-6">
+								<span class="material-icons-outlined text-accent-gold text-5xl"
+									>handshake</span
+								>
+							</div>
+							<h3
+								class="text-xl font-medium text-charcoal dark:text-gray-100 mb-4"
+							>
+								Emparejamiento Personalizado
+							</h3>
+							<p
+								class="font-body text-sm text-muted-gray dark:text-gray-400 leading-relaxed max-w-sm"
+							>
+								No solo cubrimos vacantes; encontramos el ajuste de personalidad
+								perfecto para la dinámica de su familia, asegurando la armonía a
+								largo plazo.
+							</p>
+						</div>
+					</div>
+				</section>
+				<!-- Sección de Proceso -->
+				<section id="proceso" class="py-20">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl text-primary dark:text-white">
+							Nuestro Proceso
+						</h2>
+					</div>
+					<div class="max-w-2xl mx-auto relative">
+						<div
+							class="absolute left-6 top-4 bottom-4 w-px bg-accent-gold/40"
+						></div>
+						<div class="space-y-12">
+							<div class="relative flex items-start group">
+								<div
+									class="absolute left-6 -translate-x-1/2 w-3 h-3 bg-background-light dark:bg-background-dark border-2 border-accent-gold rounded-full mt-1.5 z-10"
+								></div>
+								<div class="pl-16">
+									<span
+										class="text-accent-gold font-display text-xs tracking-[0.3em] uppercase mb-1 block"
+										>Paso 01</span
+									>
+									<h3 class="text-xl text-charcoal dark:text-gray-100 mb-2">
+										Consulta
+									</h3>
+									<p
+										class="font-body text-sm text-muted-gray dark:text-gray-400"
+									>
+										Comenzamos con una inmersión profunda en sus necesidades y
+										preferencias de estilo de vida.
+									</p>
+								</div>
+							</div>
+							<div class="relative flex items-start group">
+								<div
+									class="absolute left-6 -translate-x-1/2 w-3 h-3 bg-background-light dark:bg-background-dark border-2 border-accent-gold rounded-full mt-1.5 z-10"
+								></div>
+								<div class="pl-16">
+									<span
+										class="text-accent-gold font-display text-xs tracking-[0.3em] uppercase mb-1 block"
+										>Paso 02</span
+									>
+									<h3 class="text-xl text-charcoal dark:text-gray-100 mb-2">
+										Selección
+									</h3>
+									<p
+										class="font-body text-sm text-muted-gray dark:text-gray-400"
+									>
+										Curamos una lista corta de candidatos de primer nivel de
+										nuestra red exclusiva.
+									</p>
+								</div>
+							</div>
+							<div class="relative flex items-start group">
+								<div
+									class="absolute left-6 -translate-x-1/2 w-3 h-3 bg-background-light dark:bg-background-dark border-2 border-accent-gold rounded-full mt-1.5 z-10"
+								></div>
+								<div class="pl-16">
+									<span
+										class="text-accent-gold font-display text-xs tracking-[0.3em] uppercase mb-1 block"
+										>Paso 03</span
+									>
+									<h3 class="text-xl text-charcoal dark:text-gray-100 mb-2">
+										Entrevista
+									</h3>
+									<p
+										class="font-body text-sm text-muted-gray dark:text-gray-400"
+									>
+										Conozca a su personal potencial en el entorno de su
+										elección.
+									</p>
+								</div>
+							</div>
+							<div class="relative flex items-start group">
+								<div
+									class="absolute left-6 -translate-x-1/2 w-3 h-3 bg-primary border-2 border-primary rounded-full mt-1.5 z-10 shadow-lg shadow-primary/30"
+								></div>
+								<div class="pl-16">
+									<span
+										class="text-primary dark:text-primary-light font-display text-xs tracking-[0.3em] uppercase mb-1 block font-bold"
+										>Paso 04</span
+									>
+									<h3 class="text-xl text-charcoal dark:text-gray-100 mb-2">
+										Colocación
+									</h3>
+									<p
+										class="font-body text-sm text-muted-gray dark:text-gray-400"
+									>
+										Integración perfecta en su hogar con apoyo continuo.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Sección de Llamada a la Acción -->
+				<section id="contacto" class="py-20 border-t border-stone-100 dark:border-stone-800">
+					<div class="max-w-4xl mx-auto text-center px-6">
+						<h2 class="text-3xl md:text-4xl text-primary dark:text-white mb-4">
+							Contrate Personal de Calidad y Confianza
+						</h2>
+						<p class="font-body text-charcoal dark:text-gray-400 uppercase tracking-[0.2em] text-sm mb-12">
+							Solicite una Consulta Privada
+						</p>
+
+						<div class="flex flex-wrap justify-center gap-12 md:gap-20">
+							<!-- WhatsApp -->
+							<a href="https://wa.me/5491112345678" target="_blank" class="flex flex-col items-center group">
+								<div class="w-16 h-16 rounded-full bg-stone-50 dark:bg-stone-800 flex items-center justify-center border border-stone-200 dark:border-stone-700 group-hover:border-accent-gold transition-all duration-300 transform group-hover:-translate-y-1 group-hover:shadow-lg shadow-stone-200/50 mb-4">
+									<svg class="w-7 h-7 fill-primary dark:fill-primary-light group-hover:fill-accent-gold transition-colors" viewBox="0 0 24 24">
+										<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+									</svg>
+								</div>
+								<span class="text-xs font-bold tracking-[0.2em] uppercase text-muted-gray group-hover:text-accent-gold transition-colors">WhatsApp</span>
+								<span class="text-[14px] text-muted-gray mt-1 font-body group-hover:text-charcoal dark:group-hover:text-white transition-colors">+54 9 11 1234 5678</span>
+							</a>
+
+							<!-- Email -->
+							<a href="mailto:contacto@mariabonomi.com" class="flex flex-col items-center group">
+								<div class="w-16 h-16 rounded-full bg-stone-50 dark:bg-stone-800 flex items-center justify-center border border-stone-200 dark:border-stone-700 group-hover:border-accent-gold transition-all duration-300 transform group-hover:-translate-y-1 group-hover:shadow-lg shadow-stone-200/50 mb-4">
+									<span class="material-icons-outlined text-primary dark:text-primary-light group-hover:text-accent-gold text-2xl transition-colors">mail</span>
+								</div>
+								<span class="text-xs font-bold tracking-[0.2em] uppercase text-muted-gray group-hover:text-accent-gold transition-colors">Email</span>
+								<span class="text-[14px] text-muted-gray mt-1 font-body group-hover:text-charcoal dark:group-hover:text-white transition-colors">contacto@mariabonomi.com</span>
+							</a>
+
+							<!-- LinkedIn -->
+							<a href="https://linkedin.com/in/mariabonomi-staffing" target="_blank" class="flex flex-col items-center group">
+								<div class="w-16 h-16 rounded-full bg-stone-50 dark:bg-stone-800 flex items-center justify-center border border-stone-200 dark:border-stone-700 group-hover:border-accent-gold transition-all duration-300 transform group-hover:-translate-y-1 group-hover:shadow-lg shadow-stone-200/50 mb-4">
+									<svg class="w-7 h-7 fill-primary dark:fill-primary-light group-hover:fill-accent-gold transition-colors" viewBox="0 0 24 24">
+										<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+									</svg>
+								</div>
+								<span class="text-xs font-bold tracking-[0.2em] uppercase text-muted-gray group-hover:text-accent-gold transition-colors">LinkedIn</span>
+								<span class="text-[14px] text-muted-gray mt-1 font-body group-hover:text-charcoal dark:group-hover:text-white transition-colors">/mariabonomi-staffing</span>
+							</a>
+						</div>
+					</div>
+				</section>
+			</div>
+			<footer
+				class="bg-primary dark:bg-black text-background-light py-20 mt-20"
+			>
+				<div class="max-w-7xl mx-auto px-6 lg:px-12">
+					<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 items-start">
+						<div class="col-span-1 md:col-span-1">
+							<div class="flex items-center gap-2 mb-6">
+								<span class="material-icons-outlined text-accent-gold text-2xl"
+									>shield</span
+								>
+								<span
+									class="text-lg font-bold tracking-wide text-white uppercase"
+									>Maria Bonomi</span
+								>
+							</div>
+							<p class="text-white/60 text-sm leading-relaxed max-w-xs">
+								La principal agencia de personal doméstico que sirve a los
+								hogares más distinguidos de Argentina y Uruguay desde 1984.
+							</p>
+						</div>
+						<div>
+							<h4
+								class="text-white text-xs font-bold tracking-widest uppercase mb-6"
+							>
+								Servicios
+							</h4>
+							<ul class="space-y-3 text-white/70 text-sm font-body">
+								<li>
+									<a class="hover:text-accent-gold transition-colors" href="#servicios"
+										>Todos los Servicios</a
+									>
+								</li>
+								<li>
+									<a class="hover:text-accent-gold transition-colors" href="#servicios"
+										>Limpieza</a
+									>
+								</li>
+								<li>
+									<a class="hover:text-accent-gold transition-colors" href="#servicios"
+										>Nannies y Cuidado Infantil</a
+									>
+								</li>
+								<li>
+									<a class="hover:text-accent-gold transition-colors" href="#servicios"
+										>Gestión de Fincas</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4
+								class="text-white text-xs font-bold tracking-widest uppercase mb-6"
+							>
+								Empresa
+							</h4>
+							<ul class="space-y-3 text-white/70 text-sm font-body">
+								<li>
+									<a class="hover:text-accent-gold transition-colors" href="#sobre-nosotros"
+										>Sobre Nosotros</a
+									>
+								</li>
+								<li>
+									<a class="hover:text-accent-gold transition-colors" href="#proceso"
+										>Nuestro Proceso</a
+									>
+								</li>
+								<li>
+									<a class="hover:text-accent-gold transition-colors" href="#ventajas"
+										>Por Qué Elegirnos</a
+									>
+								</li>
+								<li>
+									<a class="hover:text-accent-gold transition-colors" href="#"
+										>Política de Privacidad</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4
+								class="text-white text-xs font-bold tracking-widest uppercase mb-6"
+							>
+								Conectar
+							</h4>
+							<div class="flex gap-4 mb-6">
+								<a
+									class="text-white/70 hover:text-white transition-colors"
+									href="#"
+								>
+									<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+										<path
+											d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+										></path>
+									</svg>
+								</a>
+								<a
+									class="text-white/70 hover:text-white transition-colors"
+									href="#"
+								>
+									<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+										<path
+											d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+										></path>
+									</svg>
+								</a>
+							</div>
+							<div class="space-y-1">
+								<p class="font-display text-sm text-white/80">
+									+54 9 11 1234 5678
+								</p>
+								<p class="font-display text-sm text-white/80">
+									contacto@mariabonomi.com
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="w-full h-px bg-white/10 my-8"></div>
+					<div
+						class="flex flex-col md:flex-row justify-between items-center gap-4"
+					>
+						<p
+							class="font-body text-[10px] text-white/40 uppercase tracking-[0.2em]"
+						>
+							© 2023 Maria Bonomi Staffing. Todos los derechos reservados.
+						</p>
+						<!-- <div class="flex gap-8">
+							<a
+								class="text-[10px] text-white/40 uppercase tracking-widest hover:text-white transition-colors"
+								href="#"
+								>Privacidad</a
+							>
+							<a
+								class="text-[10px] text-white/40 uppercase tracking-widest hover:text-white transition-colors"
+								href="#"
+								>Términos</a
+							>
+							<a
+								class="text-[10px] text-white/40 uppercase tracking-widest hover:text-white transition-colors"
+								href="#"
+								>Política de Cookies</a
+							>
+						</div> -->
+					</div>
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>
